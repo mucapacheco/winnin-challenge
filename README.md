@@ -1,6 +1,8 @@
-# Principais Tecnologias Utilizadas
+Poderá ver sendo executado na aws:
+http://ec2-52-202-49-61.compute-1.amazonaws.com/api/
 
-Foi utilizado no back end Javascript, Node, Nest, Mysql, Sqlite, Jest, Swagger.
+# Principais Tecnologias Utilizadas
+Foi utilizado no back end Javascript, Node, Nest, Mysql, Sqlite, Jest, Swagger, Docker, Docker Composer, Docker Machine, AWS Cli.
 
 # Clonar o projeto. 
 ``https://github.com/mucapacheco/winnin-challenge.git``
