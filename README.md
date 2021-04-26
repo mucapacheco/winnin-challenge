@@ -15,11 +15,9 @@ Após acessar http://localhost:3000/api
 ``npm install``
 
 # Para executar testes
-Inicializar os submodulos.
 ``npm run test``
 
 # Para executar local a api
-Inicializar os submodulos.
 ``npm start``
 
 Obs. Verificar se as portas 3000  está disponível.
