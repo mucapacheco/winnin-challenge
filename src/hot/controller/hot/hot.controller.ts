@@ -10,13 +10,13 @@ import { UserResponse } from './DTOs/Response/UserResponse';
 export class HotController {
   constructor(private readonly service: HotRedditDatabase) {}
 
-  @ApiResponse({ status: 200, type: HotResponse })
+  @ApiResponse({ status: 200, type: [HotResponse] })
   @Get('/default')
   public getDefault(@Query(new ValidationPipe()) options: DefaultDto) {
     return this.service.get(options);
   }
 
-  @ApiResponse({ status: 200, type: UserResponse })
+  @ApiResponse({ status: 200, type: [UserResponse] })
   @Get('/users')
   public getUsers(@Query(new ValidationPipe()) options: UsersDto) {
     return this.service.getUsers(options.order);
