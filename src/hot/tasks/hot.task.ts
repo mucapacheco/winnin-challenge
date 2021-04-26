@@ -10,7 +10,7 @@ export class HotTask {
 
   //Run at 4:20 pm :)
   //@Cron('20 16 * * * *')
-  //Colcando para rodar a cada segundos, para ficar mais fácil para testar.
+  //Colocando para rodar a cada 10 segundos, para ficar mais fácil para testar.
   @Cron('*/10 * * * * *')
   handleCron() {
     this.service
