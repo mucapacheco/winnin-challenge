@@ -2,11 +2,11 @@
 
 Foi utilizado no back end Javascript, Node, Nest, Mysql, Sqlite, Jest, Swagger.
 
-# Clonar o projeto.
+# Clonar o projeto. 
 ``https://github.com/mucapacheco/winnin-challenge.git``
 
-# Executar a aplicação com docker-composer
--- Pré requisito ter instalado "docker" e "docker-compose".
+# Executar a aplicação com docker-composer 
+Pré requisito ter instalado docker e docker-compose".
 ``docker-compose up -d``
 Após acessar http://localhost:3000/api
 
