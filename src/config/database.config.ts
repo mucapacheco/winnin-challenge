@@ -10,4 +10,5 @@ export const ConfigDatabaseMysql: TypeOrmModuleOptions = {
   entities: [__dirname + '/../**/*.entity{.ts,.js}'],
   synchronize: true,
   charset: 'utf8',
+  //logging: true,
 };

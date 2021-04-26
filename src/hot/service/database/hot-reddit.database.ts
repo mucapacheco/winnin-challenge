@@ -19,7 +19,7 @@ export class HotRedditDatabase {
 
   public get({ startDate, endDate, order = 'ups' }) {
     const _order = {};
-    _order[order] = 'desc';
+    _order[order] = 'DESC';
 
     return this.repository.find({
       where: (q) => {
@@ -30,13 +30,13 @@ export class HotRedditDatabase {
   }
 
   public getUsers(order = 'ups') {
-    if (!['ups', 'comments'].includes(order)) {
+    if (!['ups', 'num_comments'].includes(order)) {
       throw new Error('Select ups or comments.');
     }
 
     return this.repository
       .createQueryBuilder('h')
-      .select(['h.author as author', `count(${order}) as ups`])
+      .select(['h.author as author', `count(${order}) as ${order}`])
       .groupBy('h.author')
       .orderBy('2', 'DESC')
       .getRawMany();

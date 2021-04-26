@@ -11,6 +11,8 @@ export class DefaultDto {
   endDate: string;
 
   @ApiProperty({ example: 'ups' })
-  @Matches('^(ups|comments)$', 'i', { message: 'Select `ups` or `comments`' })
+  @Matches('^(ups|num_comments)$', 'i', {
+    message: 'Select `ups` or `num_comments`',
+  })
   order: string;
 }
