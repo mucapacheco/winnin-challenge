@@ -1,27 +1,11 @@
-FROM node As development
+FROM node:13-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /usr/app
 
-COPY package.json .
-COPY package-lock.json .
+COPY package.json ./
 
-RUN npm install
-
-COPY . .
-
-RUN npm run build
-
-FROM node as production
-
-WORKDIR /usr/src/app
-
-COPY package.json .
-COPY package-lock.json .
-
-RUN npm install --only=production
+RUN yarn
 
 COPY . .
 
-COPY --from=development /usr/src/app/dist ./dist
-
-CMD ["node", "dist/main"]
+CMD ["yarn", "start"]
